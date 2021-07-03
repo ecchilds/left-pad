@@ -6,4 +6,5 @@ setup(name='left-pad',
     author_email='', 
     license='MIT', 
     packages=['left-pad'],
+    package_dir={"left-pad": "./src"}
     zip_safe=False)

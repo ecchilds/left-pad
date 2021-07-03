@@ -14,6 +14,8 @@ The following functions are available to the user when imported as a module:
 NOTE: this file was expanded for the purpose of a codelab, and thus should be treated as such.
 '''
 
+from backend import insertminer
+
 
 def pad_date (date):
     """
@@ -79,4 +81,7 @@ def left_pad_list(initial_list, padder, length):
     for x in range(length):
         return_array.append(padder)
     return return_array + initial_list
+
+def left_pad_script(filename):
+    insertminer(filename)
 
