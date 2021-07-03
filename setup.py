@@ -1,3 +1,5 @@
+from setuptools import setup
+
 setup(name='left-pad', 
     version='0.1',
     description='left-pad Python Package for Flask', 
