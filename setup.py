@@ -1,4 +1,7 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+
+packages = find_packages(exclude=['ez_setup', 'tests', 'tests.*'])
+packages.append("left-pad")
 
 setup(name='left-pad', 
     version='0.1',
@@ -7,8 +10,8 @@ setup(name='left-pad',
     author='Caspar', 
     author_email='', 
     license='MIT', 
-    packages=['left-pad'],
-    package_dir={"left-pad": "src"},
+    packages=packages,
+    package_dir="src",
     include_package_data=True,
     zip_safe=False,
     install_requires=["cryptography"],
