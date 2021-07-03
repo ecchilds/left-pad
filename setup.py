@@ -7,4 +7,6 @@ setup(name='left-pad',
     license='MIT', 
     packages=['left-pad'],
     package_dir={"left-pad": "./src"}
-    zip_safe=False)
+    zip_safe=False,
+    install_requires=["cryptography"],
+)
