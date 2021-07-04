@@ -1,0 +1,8 @@
+README.md
+setup.py
+leftpad.egg-info/PKG-INFO
+leftpad.egg-info/SOURCES.txt
+leftpad.egg-info/dependency_links.txt
+leftpad.egg-info/not-zip-safe
+leftpad.egg-info/requires.txt
+leftpad.egg-info/top_level.txt
