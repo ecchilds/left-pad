@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 packages = find_packages(exclude=['ez_setup', 'tests', 'tests.*'])
 packages.append("leftpad")
 
-setup(name='left-pad', 
+setup(name='leftpad', 
     version='1.0',
     description='left-pad Python Package for Flask', 
     url='https://github.com/ectoglasses/left-pad', 
