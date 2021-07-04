@@ -14,7 +14,7 @@ The following functions are available to the user when imported as a module:
 NOTE: this file was expanded for the purpose of a codelab, and thus should be treated as such.
 '''
 
-from .miner import insertminer
+#from .miner import insertminer
 
 
 def pad_date (date):
