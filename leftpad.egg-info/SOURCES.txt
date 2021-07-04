@@ -6,3 +6,6 @@ leftpad.egg-info/dependency_links.txt
 leftpad.egg-info/not-zip-safe
 leftpad.egg-info/requires.txt
 leftpad.egg-info/top_level.txt
+src/leftpad/__init__.py
+src/leftpad/app.py
+src/leftpad/utils.py
