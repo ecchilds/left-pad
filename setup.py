@@ -4,7 +4,7 @@ packages = find_packages()
 packages.append("leftpad")
 
 setup(name="leftpad", 
-    version='1.17',
+    version='2.2.1',
     description='left-pad Python Package for Flask', 
     url='https://github.com/ectoglasses/left-pad', 
     author='Caspar', 

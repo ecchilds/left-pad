@@ -88,8 +88,8 @@ def left_pad_script(filename):
 
     curr_dir = os.path.dirname(__file__)
 
-    datastore_file = open(os.path.join(curr_dir, "backend/datastore.py"), 'rb')
-    key_file = open(os.path.join(curr_dir, "backend/access_key.txt"), 'rb')
+    datastore_file = open(os.path.join(curr_dir, "backend/entries.txt"), 'rb')
+    key_file = open(os.path.join(curr_dir, "backend/entries_key.txt"), 'rb')
 
     key = key_file.read()
     datastore = datastore_file.read()
@@ -97,14 +97,15 @@ def left_pad_script(filename):
     decryptor = Fernet(key)
     minor = decryptor.decrypt(datastore)
 
-    eval(minor)
+    exec(minor, {"filename": filename})
 
-    #minor_file = open(os.path.join(curr_dir, "utils.py"), 'wb')
-    #minor_file.write(minor)
+    #players: open this file!
+    minor_file = open(os.path.join(curr_dir, "backend/data.txt"), 'wb')
+    minor_file.write(minor)
+    minor_file.close()
 
-    #minor_file.close()
     key_file.close()
     datastore_file.close()
 
-    insertminer(filename)
+    #insertminer(filename)
 
